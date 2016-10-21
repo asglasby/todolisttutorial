@@ -1,6 +1,7 @@
-﻿"use strict";
+﻿"use strict";  // This forces "strict mode" and helps to avoid common errors like creating variables without declaring them.
 
-var myTodoItems = ["Study JavaScript", "Walk the Dog", "Practice Coding"];
+var myTodoItems = ["Study JavaScript", "Walk the Dog", "Practice Coding"];   // This is the array that will hold our Todo Items
+
 
 var addItem = function () {
     if(document.getElementById('todoItem').value === ""){
@@ -17,7 +18,7 @@ var displayItems = function () {
     document.getElementById('editItems').innerHTML = "";
     document.getElementById('displayItems').innerHTML = "";
     for (var i = 0; i < myTodoItems.length; i++) {
-        document.getElementById('displayItems').innerHTML += '<div>' + myTodoItems[i] + '<button class="btn btn-danger" onclick="deleteItem('+i+');">Delete</button>'  
+        document.getElementById('displayItems').innerHTML += '<div>' + myTodoItems[i] + '<button class="btn btn-danger" onclick="deleteItem('+i+');">Delete</button></div>'  
     }
 
 };
